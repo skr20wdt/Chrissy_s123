@@ -1,4 +1,4 @@
-#Christine Simon 1840920
+
 import csv
 
 import datetime
