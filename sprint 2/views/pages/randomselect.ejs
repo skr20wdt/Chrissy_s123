@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <!--creates the search bar which renders to a new page--> 
+        <div>
+            <form action="/changestatus" method="post">
+                <h1>Random Selection Status</h1>
+                <h6>If you would like to change a diner's status, please complete the form before proceeding to random restaurant selection.</h6>
+                <div class="form-group">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="form-label">New Status</label>
+                    <input type="text" id="status" name="status" class="form-control" placeholder="yes or no" required
+                    autofocus>
+                </div>
+                
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value ="Click to edit the diner's status.">
+
+            </form>
+        
+        
+        </div>
+
+        <div>
+            <h4>Current diners and their status</h4>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="jumbotron">
+                        
+                        <ul>
+                            <% diners.forEach(function(diners) { %>
+                                <li>
+                                
+                                    <strong><%= diners['firstname'] %> <%= diners['lastname'] %> : <%= diners['status'] %></strong>
+                                    
+                                </li>
+                            <% }); %>
+            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <form action="/selection" method="post">
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Click if you are ready to make the random selection.">
+            </form>
+        </div>
+
+        
+        
+        
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

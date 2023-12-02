@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+<!--creates the area for the results--> 
+    <main>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron">
+                    <p> The selected restaurant is <strong> <%= chosen['restaurantname'] %></strong> by 
+                    <strong> <%= chosen['firstname'] %> <%= chosen['lastname'] %></strong></p>
+                </div>
+            </div>
+        
+            
+        
+        </div>
+        
+        <div>
+            
+            
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>

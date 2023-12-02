@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <!--creates the search bar which renders to a new page--> 
+        <div>
+            <form action="/adduser" method="post">
+                <h2>Please enter the first and last name of a new diner and whether they will be going or not.</h2>
+                <div class="form-group">
+                    <label for="newfirstname" class="form-label">First Name</label>
+                    <input type="text" id="newfirstname" name="newfirstname" class="form-control" placeholder="First Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="newlastname" class="form-label">Last Name</label>
+                    <input type="text" id="newlastname" name="newlastname" class="form-control" placeholder="Last Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="form-label">Status</label>
+                    <input type="text" id="status" name="status" class="form-control" placeholder="yes or no" required
+                    autofocus>
+                </div>
+                
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+
+            </form>
+        
+        
+        </div>
+
+        
+        
+        
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

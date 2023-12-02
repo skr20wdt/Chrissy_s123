@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <!--creates the search bar which renders to a new page--> 
+        <div>
+            <form action="/editdiner" method="post">
+                <h1>If you would like to edit a diner's name, please complete the form.</h1>
+                <h6>Please enter the original first and last name</h6>
+                <div class="form-group">
+                    <label for="orig_first_name" class="form-label">Original First Name</label>
+                    <input type="text" id="orig_first_name" name="orig_first_name" class="form-control" placeholder="Original First Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="orig_last_name" class="form-label">Original Last Name</label>
+                    <input type="text" id="orig_last_name" name="orig_last_name" class="form-control" placeholder="Original Last Name" required
+                    autofocus>
+                </div>
+                <h6>Please enter the new first and last name. If only the first or last name needs to be changed, just fill out the unchanged name with the original name.</h6>
+                <div class="form-group">
+                    <label for="newfirst" class="form-label">New First Name</label>
+                    <input type="text" id="newfirst" name="newfirst" class="form-control" placeholder="New First Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="newlast" class="form-label">New Last Name</label>
+                    <input type="text" id="newlast" name="newlast" class="form-control" placeholder="New Last Name" required
+                    autofocus>
+                </div>
+                
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+
+            </form>
+        
+        
+        </div>
+        
+
+        
+        
+        
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

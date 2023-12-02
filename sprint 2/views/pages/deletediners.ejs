@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <!--creates the search bar which renders to a new page--> 
+        <div>
+            <form action="/deletediners" method="post">
+                <h2>If you would like to delete a diner, please enter their first and last name.</h2>
+                <div class="form-group">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required
+                    autofocus>
+                </div>
+                
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+
+            </form>
+        
+        
+        </div>
+
+        
+        
+        
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
